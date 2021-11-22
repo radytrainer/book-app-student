@@ -1,15 +1,13 @@
 <template>
   <form>
     <div>
-      <label>Title</label>
-      <input type="text" />
+      <input type="text" placeholder="Title" autofocus/>
     </div>
 
     <div>
-      <label>Description</label>
-      <input type="text" />
+      <input type="text" placeholder="Description"/>
     </div>
-    <div>
+    <div class="add">
       <button>Add Book</button>
     </div>
   </form>
@@ -31,7 +29,8 @@ form {
   max-width: 40rem;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-left: 3px solid #0E2EE1;
 }
 
 form div {
@@ -39,12 +38,24 @@ form div {
 }
 
 input {
-  padding: 0.15rem;
+  padding: 0.6rem;
+  width: 100%;
 }
 label {
   font-weight: bold;
   margin-right: 1rem;
   width: 7rem;
   display: inline-block;
+  color: #777;
+  font-size: 15px;
+  padding: 10px 0;
+}
+::placeholder {
+  font-style: italic;
+  letter-spacing:1px
+}
+.add {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
